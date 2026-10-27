@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ganesh Akone – Pharmacist who builds things</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B1512;--pn:#142620;--ink:#EAF3EE;--mut:#9FB8AB;--ln:#2B4A3E;--ac:#F2B632;--acink:#1A1405;--lf:#5CC27E;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#EEF4F0;--pn:#FFF;--ink:#13241C;--mut:#486055;--ln:#BFD1C6;--ac:#1E4D36;--acink:#FFF;--lf:#2E8F4E}}
+:root[data-theme="light"]{--bg:#EEF4F0;--pn:#FFF;--ink:#13241C;--mut:#486055;--ln:#BFD1C6;--ac:#1E4D36;--acink:#FFF;--lf:#2E8F4E}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Work Sans",system-ui,sans-serif}
+h1,h2{font-family:Fraunces,Georgia,serif;margin:0}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+#hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+#bg{position:absolute;inset:0;width:100%;height:100%}
+#hero .w{position:relative;pointer-events:none}
+h1{font-weight:800;font-size:clamp(3rem,15vw,7rem);line-height:.92;letter-spacing:-.03em}
+.tag{color:var(--mut);font-size:1.1rem;margin-top:18px;max-width:24em}
+.dn{margin-top:26px;color:var(--ac);font-weight:600}
+section{padding:64px 0;border-top:1px solid var(--ln)}
+h2{font-size:clamp(1.7rem,6vw,2.4rem);margin-bottom:6px}
+.q{color:var(--mut);margin:0 0 22px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.bands{display:flex;height:120px;border-radius:14px;overflow:hidden;border:2px solid var(--ln)}
+.bands div{flex:1;transition:background .15s}
+#stir{width:100%;margin:18px 0 6px;accent-color:var(--ac)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chips span{border:1px solid var(--ln);border-radius:99px;padding:4px 12px;font-size:.88rem;color:var(--mut)}
+#sm{font-weight:600;min-height:1.5em}
+.flip{perspective:900px;width:100%;height:210px;background:none;border:0;padding:0}
+.fi{position:relative;width:100%;height:100%;transition:transform .8s;transform-style:preserve-3d}
+.flip[aria-pressed=true] .fi{transform:rotateY(180deg)}
+.fc{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:center;text-align:left;border:2px solid var(--ac)}
+.fc.f{background:var(--pn)}.fc.b{background:var(--ac);color:var(--acink);transform:rotateY(180deg)}
+.fc b{font:800 1.5rem Fraunces,Georgia,serif}.fc small{opacity:.8;margin-top:6px}
+.shelf{display:flex;align-items:flex-end;gap:8px;height:190px;border-bottom:6px solid var(--ln)}
+.sp{flex:1;border:0;border-radius:6px 6px 0 0;transition:transform .3s;color:#0B1512;font:600 .8rem Fraunces,serif;writing-mode:vertical-rl;padding:8px 0}
+.sp[aria-pressed=true]{transform:translateY(-16px)}
+#pb{min-height:4.5em;margin-top:16px;font-weight:600}
+.pt{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.el{background:var(--pn);border:1.5px solid var(--ln);border-radius:8px;padding:8px;text-align:left;aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
+.el small{font-size:.7rem;color:var(--mut)}.el b{font:800 1.6rem Fraunces,Georgia,serif}
+.el[aria-pressed=true]{border-color:var(--ac);transform:scale(1.06)}
+#sk{margin-top:14px;font-weight:600;min-height:1.5em}
+.st{position:relative;padding-left:34px;margin-left:8px}
+.st:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:3px;background:linear-gradient(var(--lf),var(--ac));border-radius:3px}
+.nd{position:relative;margin-bottom:30px;opacity:.15;transform:translateX(-14px);transition:.7s}
+.nd.on{opacity:1;transform:none}
+.nd:before{content:"";position:absolute;left:-34px;top:4px;width:19px;height:19px;border-radius:50% 0 50% 0;background:var(--lf);transform:rotate(45deg)}
+.nd b{font:600 1.15rem Fraunces,Georgia,serif}.nd p{margin:2px 0 0;color:var(--mut)}
+.big{display:inline-block;margin-top:14px;padding:16px 30px;border-radius:99px;background:var(--ac);color:var(--acink);font:800 1.3rem Fraunces,Georgia,serif;text-decoration:none}
+.big+.big{background:transparent;color:var(--ink);border:2px solid var(--ln);margin-left:8px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header id="hero"><canvas id="bg" aria-hidden="true"></canvas>
+<div class="w"><h1>Ganesh<br>Akone</h1>
+<p class="tag">Pharmacist from Nagpur. I turn herbs into formulations, devices and papers.</p>
+<p class="dn">Touch the background. Then scroll.</p></div></header>
+
+<section><div class="w"><h2>Thesis: stir the cream</h2>
+<p class="q">My final-year project, a wound-healing cream from banyan, neem and turmeric. Drag to emulsify.</p>
+<div class="bands" id="bands"><div></div><div></div><div></div></div>
+<input id="stir" type="range" min="0" max="100" value="0" aria-label="Stir the emulsion">
+<p id="sm">Three extracts, not yet mixed.</p>
+<div class="chips"><span>Stability tested</span><span>pH evaluated</span><span>Spreadability measured</span><span>MOIL intern: data integrity, 2022–23</span></div>
+</div></section>
+
+<section><div class="w"><h2>Design: open the case</h2>
+<p class="q">Tap the card.</p>
+<button class="flip" id="fl" aria-pressed="false" aria-label="Flip registered design card"><div class="fi">
+<div class="fc f"><b>A device that reads what’s inside a herb</b><small>Co-inventor</small></div>
+<div class="fc b"><b>Design No. 471452-001</b><small>Registered, January 2026 · The Patent Office, Government of India</small></div>
+</div></button></div></section>
+
+<section><div class="w"><h2>Publications: pull a book</h2>
+<p class="q">Four pieces of writing, shelved.</p>
+<div class="shelf" id="sh"></div><p id="pb">Pick a spine.</p></div></section>
+
+<section><div class="w"><h2>Skills: the periodic table of me</h2>
+<p class="q">Ten elements I work with.</p>
+<div class="pt" id="pt"></div><p id="sk">Tap an element.</p></div></section>
+
+<section><div class="w"><h2>Education: growth rings</h2>
+<p class="q">Scroll down the stem.</p>
+<div class="st">
+<div class="nd"><b>HSC Science, 2020</b><p>Lal Bahadur Shastri Jr. College, Bhandara · 83.69%</p></div>
+<div class="nd"><b>ITI, Computer Operator, 2022</b><p>Government ITI, Nagpur · 88% · MS-CIT 90%</p></div>
+<div class="nd"><b>B.Pharm, 2026</b><p>Central India College of Pharmacy, Nagpur · college topper · GPAT 2026 score 108</p></div>
+</div></div></section>
+
+<section><div class="w"><h2>Let’s build something.</h2>
+<p class="q">Open to R&amp;D and QA/QC roles in pharma.</p>
+<a class="big" href="mailto:gakone5@gmail.com">Email</a><a class="big" href="https://linkedin.com/in/ganesh-akone" rel="noopener">LinkedIn</a></div></section>
+
+<script>
+const $=s=>document.querySelector(s),RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+/* hero particles */
+const cv=$("#bg"),cx=cv.getContext("2d"),m={x:-999,y:-999},C=["#5CC27E","#2E8F4E","#F2B632"];let W,H,P=[];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener("resize",rs);
+for(let i=0;i<70;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:2+Math.random()*5,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,c:C[i%3]});
+$("#hero").addEventListener("pointermove",e=>{const b=cv.getBoundingClientRect();m.x=e.clientX-b.left;m.y=e.clientY-b.top});
+function dr(){cx.clearRect(0,0,W,H);for(const p of P){const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy)||1;
+if(d<110){p.x+=dx/d*3;p.y+=dy/d*3}p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;
+cx.globalAlpha=.75;cx.fillStyle=p.c;cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}if(!RM)requestAnimationFrame(dr)}dr();
+/* stir */
+const cols=["#5CC27E","#2E8F4E","#F2B632"],cr=[239,230,196];
+const mix=(h,t)=>"rgb("+[0,2,4].map((o,i)=>Math.round(parseInt(h.substr(1+o,2),16)*(1-t)+cr[i]*t)).join(",")+")";
+function stir(){const v=$("#stir").value/100;document.querySelectorAll("#bands div").forEach((d,i)=>d.style.background=mix(cols[i],v));
+$("#sm").textContent=v>.95?"Stable emulsion. Cream done.":v>.4?"Blending…":"Three extracts, not yet mixed."}
+$("#stir").oninput=stir;stir();
+/* flip */
+$("#fl").onclick=e=>{const b=e.currentTarget;b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!="true")};
+/* books */
+const B=[["Long COVID: herbal immunomodulators","International Journal of Pharmaceutical Sciences, Nov 2025",150,"#5CC27E"],
+["Smoking and cardiovascular health with herbal treatment","IJRASET, Nov 2025 (review)",180,"#F2B632"],
+["Early-onset Alzheimer’s and herbal management","International Journal of Pharmaceutical Sciences, Sep 2025",130,"#2E8F4E"],
+["Liquid biopsy: detecting cancer cells for targeted therapy","Book chapter, Academic Decipher, Sep 2025",165,"#C9D86B"]];
+B.forEach((b,i)=>{const e=document.createElement("button");e.className="sp";e.style.cssText="height:"+b[2]+"px;background:"+b[3];e.textContent=b[0].split(":")[0].slice(0,22);e.setAttribute("aria-pressed","false");e.setAttribute("aria-label",b[0]);
+e.onclick=()=>{document.querySelectorAll(".sp").forEach(s=>s.setAttribute("aria-pressed","false"));e.setAttribute("aria-pressed","true");$("#pb").textContent=b[0]+" — "+b[1]};$("#sh").append(e)});
+/* periodic table */
+const S=[["Fo","Polyherbal formulation"],["Ex","Phytoconstituent extraction"],["Gm","GMP and PCI compliance"],["So","SOP adherence"],["Va","Validation workflows"],["Au","Quality auditing"],["Xl","Advanced Excel: validation, pivot tables"],["Sw","Scientific writing"],["Cr","Clinical research methods"],["Di","Documentation integrity"]];
+S.forEach((s,i)=>{const e=document.createElement("button");e.className="el";e.setAttribute("aria-pressed","false");e.setAttribute("aria-label",s[1]);
+e.innerHTML="<small>"+(i+1)+"</small><b>"+s[0]+"</b>";
+e.onclick=()=>{document.querySelectorAll(".el").forEach(x=>x.setAttribute("aria-pressed","false"));e.setAttribute("aria-pressed","true");$("#sk").textContent=s[0]+": "+s[1]};$("#pt").append(e)});
+/* growth */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("on")}),{threshold:.6});
+document.querySelectorAll(".nd").forEach(n=>io.observe(n));
+</script></body></html>
